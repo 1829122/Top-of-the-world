@@ -4,7 +4,8 @@
 **I am geious boy**
 *if you follow me maybe you get A+*
 *Goodbye*
-###Code
-***javascript
+### Code
+```javascript
 var foo = 'bar';
 if(true) foo = 'foo';
+```
