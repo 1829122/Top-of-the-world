@@ -4,7 +4,7 @@
 
 **I am genious boy**
 
-*if you follow me maybe you get A+*
+*if you follow me you get A+*
 
 *Goodbye*
 
