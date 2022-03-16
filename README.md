@@ -2,9 +2,9 @@
 # Top-of-the-world
 **Hello**
 
-**I am genious boy**
+**I like you**
 
-*if you follow me you get A+*
+*I Love you*
 
 *Goodbye*
 
