@@ -13,7 +13,15 @@
 
 *Brooks Law:지체되는 소프트웨어 개발 프로젝트에 인력을 더하는 것은 개발을 늦춘다. 왜냐하면, 커뮤니케이션에 문제가 생기기 떄문이다. 따라서, 온라인 공간에서 커뮤니케이션은 Brooks Law가 안               지켜질 수도 있음*
 
-*Use Labels:책임의 영역, 긴급/비긴급, 추가적인 정보 기다려야하는 이슈 분리, 이슈풀 생성*
+*best practice 5: Use Labels:책임의 영역, 긴급/비긴급, 추가적인 정보 기다려야하는 이슈 분리, 이슈풀 생성*
+
+*best practice 6: Mention the appropriate people 특정 인물 언급 불특정 다수 x*
+
+*best practice 7: Choose a workflow to Assign Issues to Developers: 특정 개발자에게 이슈를 할당*
+
+*best practice 8: Don't Forgetto Close Issues*
+
+
 
 
 
