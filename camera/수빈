@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraController : MonoBehaviour
+{
+    [SerializeField]    Define.CameraMode _mode = Define.CameraMode.ThirdPersonCam;
+    [SerializeField]    Vector3 _delta = new Vector3(0.0f, 8.0f, -6.0f);
+    [SerializeField]    GameObject _player = null;
+    [SerializeField]    float m_Speed = 3.0f;
+
+    public Transform follow;
+    Vector2 m_Input;
+
+
+    void Start()
+    {
+
+    }
+
+    void LateUpdate()
+    {
+        if (_mode == Define.CameraMode.QuarterView) // ī�޶��尡 QuarterView�� ��
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(_player.transform.position, _delta, out hit, _delta.magnitude, LayerMask.GetMask("Wall"))) 
+            {
+                float dist = (hit.point - _player.transform.position).magnitude * 0.8f;
+                transform.position = _player.transform.position + _delta.normalized * dist;
+            }
+            else
+            {
+                transform.position = _player.transform.position + _delta;
+                transform.LookAt(_player.transform);
+            }
+        }
+
+        if(_mode == Define.CameraMode.ThirdPersonCam)
+        {
+            Rotate();
+        }
+    }
+    public void Rotate()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            m_Input.x = Input.GetAxis("Mouse X");
+            m_Input.y = Input.GetAxis("Mouse Y");
+
+            if(m_Input.magnitude != 0)
+            {
+                Quaternion q = follow.rotation;
+                q.eulerAngles = new Vector3(q.eulerAngles.x + m_Input.y * m_Speed, q.eulerAngles.y + m_Input.x * m_Speed, q.eulerAngles.z);
+                follow.rotation = q;
+            }
+        }
+    }
+}
